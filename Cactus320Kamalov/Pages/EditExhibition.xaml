@@ -1,0 +1,92 @@
+﻿<Page
+    x:Class="Cactus320Kamalov.Pages.EditExhibition"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Cactus320Kamalov.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="EditExhibition"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <Grid Margin="10" Background="#ffff">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="5">
+            Дата:
+        </Label>
+        <DatePicker
+            x:Name="DateDatePicker"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="5"
+            SelectedDate="{Binding Date, Mode=TwoWay}" />
+
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="5">
+            Место:
+        </Label>
+        <TextBox
+            x:Name="LocationTextBox"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="5" />
+
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="5">
+            Награды:
+        </Label>
+        <TextBox
+            x:Name="AwardsTextBox"
+            Grid.Row="2"
+            Grid.Column="1"
+            Height="100"
+            Margin="5"
+            HorizontalAlignment="Stretch"
+            AcceptsReturn="True"
+            VerticalScrollBarVisibility="Auto" />
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="5">
+            Комментарии:
+        </Label>
+        <TextBox
+            x:Name="CommentsTextBox"
+            Grid.Row="3"
+            Grid.Column="1"
+            Height="100"
+            Margin="5"
+            HorizontalAlignment="Stretch"
+            AcceptsReturn="True"
+            VerticalScrollBarVisibility="Auto" />
+
+        <Button
+            x:Name="SaveButton"
+            Grid.Row="4"
+            Grid.Column="1"
+            Margin="5"
+            Click="SaveButton_Click" Background="#FF4CAF50">
+            Сохранить
+        </Button>
+    </Grid>
+</Page>
